@@ -24,7 +24,7 @@ function displayPokemon(pokemon) {
   const PokeString = pokemon
     .map(
       (pokeman) =>
-        `<li>
+        `<li class = "card">
           <img src = "${pokeman.image}"/>
           <h2> ${pokeman.id}. ${pokeman.name}</h2>
           <p> Type : ${pokeman.type}</p>
