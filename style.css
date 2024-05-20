@@ -80,3 +80,17 @@ h1 {
   top: 20px;
   right: 20px;
 }
+button {
+  background-color: orangered;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  transition: transform 100ms;
+}
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 1px 2px;
+  background-color: darkred;
+  transform: translateY(-2px);
+}
