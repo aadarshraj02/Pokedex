@@ -26,7 +26,7 @@ function displayPokemon(pokemon) {
       (pokeman) =>
         `<li class = "card">
           <img src = "${pokeman.image}"/>
-          <h2> ${pokeman.id}. ${pokeman.name}</h2>
+          <h2 class ="card-title"> ${pokeman.id}. ${pokeman.name}</h2>
           <p> Type : ${pokeman.type}</p>
     </li>`
     )
