@@ -45,9 +45,10 @@ const displayPopup = (pokeman) => {
           <div class = "card">
           <img class = "image" src = "${pokeman.image}"/>
           <h2 class ="card-title"> ${pokeman.id}. ${pokeman.name}</h2>
-          <p><small>Height: </small>${pokeman.height}| <small>Weight: </small>${pokeman.weight} | <small>Type: </small>${pokeman.type}</p>
+          <p><small>Height: </small>${pokeman.height}| <small>Weight: </small>${pokeman.weight} | <small>Type: </small>${type}</p>
     </div>
   </div>`;
+  console.log(html);
 };
 
 fetchPokemon();
