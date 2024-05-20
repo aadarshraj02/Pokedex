@@ -25,7 +25,7 @@ function displayPokemon(pokemon) {
     .map(
       (pokeman) =>
         `<li class = "card">
-          <img src = "${pokeman.image}"/>
+          <img class = "image" src = "${pokeman.image}"/>
           <h2 class ="card-title"> ${pokeman.id}. ${pokeman.name}</h2>
           <p class = "subtitle"> Type : ${pokeman.type}</p>
     </li>`
