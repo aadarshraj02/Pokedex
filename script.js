@@ -39,6 +39,15 @@ const selectPokemon = async (id) => {
 const displayPopup = (pokeman) => {
   // console.log(pokeman);
   const type = pokeman.types.map((type) => type.type.name).toString();
+  const html = `
+  <div class ="popup">
+    <button id = "closeBtn" onClick ="closePopup()" >Close</button>
+          <div class = "card">
+          <img class = "image" src = "${pokeman.image}"/>
+          <h2 class ="card-title"> ${pokeman.id}. ${pokeman.name}</h2>
+          <p><small>Height: </small>${pokeman.height}| <small>Weight: </small>${pokeman.weight} | <small>Type: </small>${pokeman.type}</p>
+    </div>
+  </div>`;
 };
 
 fetchPokemon();
