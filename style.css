@@ -62,3 +62,16 @@ h1 {
   font-size: 54px;
   color: #f4f4f4;
 }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f4f4f4;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
