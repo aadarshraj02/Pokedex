@@ -34,3 +34,7 @@ body {
 .image {
   height: 180px;
 }
+.container {
+  padding: 40px;
+  margin: 0 auto;
+}
