@@ -21,7 +21,7 @@ function displayPokemon(pokemon) {
   const PokeString = pokemon
     .map(
       (pokeman) =>
-        `<li class = "card" onClick = "selectPokemon(${pokemon.id})>
+        `<li class = "card" onclick = "selectPokemon(${pokeman.id})">
           <img class = "image" src = "${pokeman.image}"/>
           <h2 class ="card-title"> ${pokeman.id}. ${pokeman.name}</h2>
     </li>`
@@ -29,5 +29,7 @@ function displayPokemon(pokemon) {
     .join("");
   pokedex.innerHTML = PokeString;
 }
+const selectPokemon = async (id) => 
+  {};
 
 fetchPokemon();
