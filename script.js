@@ -21,14 +21,16 @@ const fetchPokemon = () => {
 
 function displayPokemon(pokemon) {
   console.log(pokemon);
-  const PokeString = pokemon.map(
-    (pokeman) =>
-      `<li>
+  const PokeString = pokemon
+    .map(
+      (pokeman) =>
+        `<li>
           <img src = "${pokeman.image}"/>
           <h2> ${pokeman.id}. ${pokeman.name}</h2>
           <p> Type : ${pokeman.type}</p>
     </li>`
-  );
+    )
+    .join("");
   pokedex.innerHTML = PokeString;
 }
 
