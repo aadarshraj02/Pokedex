@@ -6,6 +6,14 @@ const fetchPokemon = () => {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     promises.push(fetch(url).then((response) => response.json()));
   }
-  Promise.all(promise).then(results);
+  Promise.all(promises).then((result) => {
+    const pokemon = result.map((data) => ({
+      name: data.name,
+      id: data.id,
+      image: data.sprites.front_default,
+      type: data.types.map((type) => type.type.name).toString(),
+    }));
+    console.log(pokemon);
+  });
 };
-// fetchPokemon();
+fetchPokemon();
