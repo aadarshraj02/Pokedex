@@ -7,7 +7,7 @@ const fetchPokemon = async () => {
   const response = await fetch(url);
   const data = await response.json();
   const pokemon = data.results.map((result, index) => ({
-    name: data.name,
+    name: result.name,
     id: index + 1,
     image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
       index + 1
@@ -21,10 +21,9 @@ function displayPokemon(pokemon) {
   const PokeString = pokemon
     .map(
       (pokeman) =>
-        `<li class = "card">
+        `<li class = "card" onClick = "selectPokemon(${pokemon.id})>
           <img class = "image" src = "${pokeman.image}"/>
           <h2 class ="card-title"> ${pokeman.id}. ${pokeman.name}</h2>
-          <p class = "subtitle"> Type : ${pokeman.type}</p>
     </li>`
     )
     .join("");
