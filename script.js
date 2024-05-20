@@ -29,7 +29,11 @@ function displayPokemon(pokemon) {
     .join("");
   pokedex.innerHTML = PokeString;
 }
-const selectPokemon = async (id) => 
-  {};
+const selectPokemon = async (id) => {
+  const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+  const response = await fetch(url);
+  const pokeman = await response.json();
+  displayPopup(pokemon);
+};
 
 fetchPokemon();
