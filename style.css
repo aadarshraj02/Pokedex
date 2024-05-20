@@ -25,3 +25,8 @@ body {
   font-size: 32px;
   font-weight: normal;
 }
+.subtitle {
+  font-weight: lighter;
+  color: #665;
+  margin-top: 5px;
+}
