@@ -14,6 +14,7 @@ body {
   padding: 40px;
   background-color: #f4f4f4;
   color: #222;
+  text-align: center;
 }
 #pokedex {
   display: grid;
@@ -29,4 +30,7 @@ body {
   font-weight: lighter;
   color: #665;
   margin-top: 5px;
+}
+.image {
+  height: 180px;
 }
