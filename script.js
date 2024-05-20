@@ -39,7 +39,7 @@ const selectPokemon = async (id) => {
 const displayPopup = (pokeman) => {
   // console.log(pokeman);
   const type = pokeman.types.map((type) => type.type.name).toString();
-  const html = `
+  const htmlStr = `
   <div class ="popup">
     <button id = "closeBtn" onClick ="closePopup()" >Close</button>
           <div class = "card">
@@ -48,7 +48,8 @@ const displayPopup = (pokeman) => {
           <p><small>Height: </small>${pokeman.height}| <small>Weight: </small>${pokeman.weight} | <small>Type: </small>${type}</p>
     </div>
   </div>`;
-  console.log(html);
+  pokedex.innerHTML = htmlStr;
+  // console.log(html);
 };
 
 fetchPokemon();
