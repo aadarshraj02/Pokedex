@@ -49,8 +49,13 @@ const displayPopup = (pokeman) => {
           <p><small>Height: </small>${pokeman.height}| <small>Weight: </small>${pokeman.weight} | <small>Type: </small>${type}</p>
     </div>
   </div>`;
-  pokedex.innerHTML = htmlStr;
+  pokedex.innerHTML = htmlStr + pokedex.innerHTML;
   // console.log(html);
+};
+
+const closePopup = () => {
+  const popup = document.querySelector(".popup");
+  popup.parentElement.removeChild(popup);
 };
 
 fetchPokemon();
