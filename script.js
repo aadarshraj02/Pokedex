@@ -33,7 +33,11 @@ const selectPokemon = async (id) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
   const response = await fetch(url);
   const pokeman = await response.json();
-  displayPopup(pokemon);
+  displayPopup(pokeman);
+};
+
+const displayPopup = (pokeman) => {
+  console.log(pokeman);
 };
 
 fetchPokemon();
