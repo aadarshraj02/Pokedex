@@ -1,6 +1,6 @@
 //const url = "https://pokeapi.co/api/v2/pokemon/1";
 
-const pokedex = document.getElementById('pokedex')
+const pokedex = document.getElementById("pokedex");
 
 const fetchPokemon = () => {
   const promises = [];
@@ -21,6 +21,15 @@ const fetchPokemon = () => {
 
 function displayPokemon(pokemon) {
   console.log(pokemon);
+  const PokeString = pokemon.map(
+    (pokeman) =>
+      `<li>
+          <img src = "${pokeman.image}"/>
+          <h2> ${pokeman.id}. ${pokeman.name}</h2>
+          <p> Type : ${pokeman.type}</p>
+    </li>`
+  );
+  pokedex.innerHTML = PokeString;
 }
 
 fetchPokemon();
