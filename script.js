@@ -27,7 +27,7 @@ function displayPokemon(pokemon) {
         `<li class = "card">
           <img src = "${pokeman.image}"/>
           <h2 class ="card-title"> ${pokeman.id}. ${pokeman.name}</h2>
-          <p> Type : ${pokeman.type}</p>
+          <p class = "subtitle"> Type : ${pokeman.type}</p>
     </li>`
     )
     .join("");
