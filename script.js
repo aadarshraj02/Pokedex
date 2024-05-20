@@ -1,5 +1,7 @@
 //const url = "https://pokeapi.co/api/v2/pokemon/1";
 
+const pokedex = document.getElementById('pokedex')
+
 const fetchPokemon = () => {
   const promises = [];
   for (let i = 1; i <= 150; i++) {
